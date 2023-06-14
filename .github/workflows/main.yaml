@@ -17,4 +17,5 @@ jobs:
         run: npm install -g surge
 
       - name: Deploy to Surge
-        run: surge --token ${{ secrets.SURGE_TOKEN }} --project ../../../
+        run: surge --token ${{ secrets.SURGE_TOKEN }} --project ../../ --domain devops-practice-heger-mel.surge.sh
+        
