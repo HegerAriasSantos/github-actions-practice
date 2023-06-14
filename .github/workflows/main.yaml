@@ -19,7 +19,6 @@ jobs:
       - name: review secret
         run: echo ${{ secrets.SURGE_TOKEN }}
 
-      - name: Deploy to Surge
       - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.SURGE_TOKEN }}
