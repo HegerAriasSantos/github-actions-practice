@@ -20,5 +20,9 @@ jobs:
         run: echo ${{ secrets.SURGE_TOKEN }}
 
       - name: Deploy to Surge
-        run: surge --token ${{ secrets.SURGE_TOKEN }} --project ../../ --domain devops-practice-heger-mel.surge.sh
+      - shell: bash
+        env:
+          SUPER_SECRET: ${{ secrets.SURGE_TOKEN }}
+        run: |
+          surge --token "$SUPER_SECRET" --project ../../ --domain devops-practice-heger-mel.surge.sh
         
